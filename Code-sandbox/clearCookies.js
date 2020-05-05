@@ -10,11 +10,10 @@ function App() {
   const [password, setPassword] = React.useState("xy");
   const [loggin, setLoggin] = React.useState(false);
 
-  const logChecker = () => {
+  // me falta un paso donde llamo el home en JSX, pero no lo apunte todo
+  const logChecker = () => {};
 
-  };
-
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault();
     Cookie.set("USERNAME", name, { expires: 3 });
     Cookie.set("PASSWORD", password);
@@ -31,16 +30,16 @@ function App() {
         <input
           type="text"
           placeholder="Username"
-          onChange={e => setName(e.target.value)}
+          onChange={(e) => setName(e.target.value)}
           value={name}
         />
         <input
           type="text"
           placeholder="Password"
-          onChange={e => setPassword(e.target.value)}
+          onChange={(e) => setPassword(e.target.value)}
           value={password}
         />
-        <button>{loggin == true ? <Home/>}</button>
+        <button>{loggin == true ? <Home /> : "submit"}</button>
         <p>{Cookie.get("USERNAME")}</p>
         <button onClick={handleLogout}>LogOut</button>
       </form>
