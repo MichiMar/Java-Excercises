@@ -103,5 +103,5 @@ class App extends Component {
   }
 }
 
-//  Put thi thing into the DOM !
-ReactDOM.render((<App />).document.getElementById("app"));
+//  Put the thing into the DOM !
+// ReactDOM.render((<App />).document.getElementById("app"));
