@@ -1,0 +1,64 @@
+body {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.board-head {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  justify-content: space-between;
+  align-items: center;
+  border-left: 1px solid #444;
+  border-right: 1px solid #444;
+  .reset,
+  .flag-count,
+  .timer {
+    width: 55px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .reset {
+    font-size: 25px;
+  }
+}
+
+ines (34 sloc) 706 Bytes .board {
+  width: 500px;
+  height: 500px;
+  border: 1px solid #444;
+  border-bottom: none;
+  .row {
+    display: flex;
+    height: 55px;
+    &:last-child {
+      border-bottom: none;
+      height: 50px;
+    }
+    .cell {
+      border-right: 1px solid #444;
+      width: 52px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1px solid #444;
+      &.open {
+        background-color: #d4d4d4;
+        &:hover {
+          background-color: #d4d4d4;
+        }
+      }
+      &:hover {
+        background-color: #eeeeee;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+  }
+}
